@@ -1,0 +1,21 @@
+; ============================================================
+; ECR Attributes Block
+; ============================================================
+; Attributes block for ECR vLEI Credential
+
+ecr-a = said / ; Attributes block SAID
+    ecr-a-properties
+
+ecr-a-boilerplate = {
+    "$id": "EDv4wiOMHE125CXu-EuOd0YRXz-AgpLilJfjoODFqtHD"
+}
+
+ecr-a-properties = {
+    ? d: said ; Attributes block SAID
+    ? u: tstr ; A high entropy nonce
+    i: aid ; Person Issuee AID
+    dt: date-time ; Issuance date time
+    LEI: tstr ; LEI of the Legal Entity" in ISO17442 format
+    personLegalName: tstr ; Recipient name as provided during identity assurance
+    engagementContextRole: tstr ; Role description i.e. 'Head of Standards'
+}

@@ -1,0 +1,6 @@
+; ECR Authorization vLEI Credential
+
+ecr-auth-cred = [
+    ecr-auth-boilerplate,
+    ecr-auth-properties
+]

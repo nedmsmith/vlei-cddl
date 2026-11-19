@@ -1,0 +1,18 @@
+; ============================================================
+; iXBRL Attributes / Data Block
+; ============================================================
+; Data block containing iXBRL facts
+
+ixbri-a = ixbri-a-properties
+
+ixbri-a-boilerplate = { ; data block boilerplate
+    "$id": "EDj-Pm8CNw80aA5djaobjhM__eFeAZIIkgo1-nfkB7M1",
+}
+
+ixbri-a-properties = {
+    d: said ; SAID of the data block
+    dt: date-time ; signed date time
+    rd: tstr ; Digest of entire signed iXBRL report
+    ; Signed facts of report
+    f: [ + ixbri-fact ] ; Array of iXBRL facts
+}

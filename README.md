@@ -9,5 +9,4 @@ Make sure to check "Include all branches", or you will need to enable GitHub Pag
 instructions](https://github.com/martinthomson/i-d-template/blob/main/doc/TEMPLATE.md)
 for more information.
 
-Once you have created your own repository, start work by
-[renaming the `draft-todo-yourname-protocol.md` file](../../edit/main/draft-todo-yourname-protocol.md).
+The draft source is [draft-nsmith-vlei-cddl.md](draft-nsmith-vlei-cddl.md).

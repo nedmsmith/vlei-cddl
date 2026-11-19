@@ -1,0 +1,33 @@
+; ============================================================
+; Node-Schema Pairs
+; ============================================================
+; Schema node pairs for linking credentials to their schemas
+
+node-schema-pair = {
+  n: said    ; node SAID (issuer credential SAID)
+  s: said    ; schema SAID (SAID of required schema)
+}
+
+; schema specific node-schema-pair for QVI Issuer's Credential
+node-schema-pair-qvi = {
+  n: said
+  s: "EBfdlu8R27Fbx-ehrqwImnK-8Cm79sqbAQ4MmvEAYqao"
+}
+
+; schema specific node-schema-pair for LE Issuer's Credential
+node-schema-pair-le = {
+  n: said
+  s: "ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY"
+}
+
+; ixbri OOR variant that fixes s to the EBNaNu... SAID
+node-schema-pair-oor-ixbri = {
+  n: said
+  s: "EBNaNu-M9P5cgrnfl2Fvymy4E_jvxxyjb70PRtiANlJy"
+}
+
+; ixbri ECR variant (fixes s to EEy9...)
+node-schema-pair-ecr-ixbri = {
+  n: said
+  s: "EEy9PkikFcANV1l7EHukCeXqrzT1hNZjGlUk7wuMO5jw"
+}

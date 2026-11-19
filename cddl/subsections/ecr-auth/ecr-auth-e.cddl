@@ -1,0 +1,17 @@
+; ============================================================
+; ECR-Auth Edges Block
+; ============================================================
+; Edges block for linking to LE credential
+
+ecr-auth-e = said / ; Edges block SAID
+    ecr-auth-e-properties
+
+ecr-auth-e-boilerplate = { ; Edges block boilerplate
+    "$id": "EB6E1GJvVen5NqkKb2TG5jqX66vYOL3md-xkXQqQBySX"
+}
+
+ecr-auth-e-properties = {
+    d: said ; Edges block SAID
+    ; Chain to legal entity vLEI credential
+    le: node-schema-pair-le ; QVI Issuer credential
+}

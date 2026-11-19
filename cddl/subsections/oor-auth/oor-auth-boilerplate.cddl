@@ -1,0 +1,14 @@
+; ============================================================
+; OOR-Auth Boilerplate
+; ============================================================
+; OOR Authorization vLEI Credential boilerplate
+
+oor-auth-boilerplate = {
+    ? "$id": "EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E",
+    ? "$schema": "http://json-schema.org/draft-07/schema#",
+    ? title: "OOR Authorization vLEI Credential",
+    ? description: "A vLEI Authorization Credential issued by a Legal Entity to a QVI for the authorization of OOR credentials",
+    ? type: "object",
+    ? credentialType: "OORAuthorizationvLEICredential",
+    ? version: "1.0.0"
+}

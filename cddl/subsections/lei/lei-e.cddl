@@ -1,0 +1,16 @@
+; ============================================================
+; LEI Edges Block
+; ============================================================
+; Edges block for linking to QVI node
+
+lei-e = said / ; Edges block SAID
+    lei-e-properties ; Edges block SAD
+
+lei-e-boilerplate = { ; Edges block boilerplate
+    "$id": "EDh9sp5cPk0-yo5sFMo6WJS1HMBYIOYCwJrnPvNaH1vI"
+}
+
+lei-e-properties = {
+    d: said ; Edges block SAID
+    qvi: node-schema-pair-qvi ; QVI node
+}

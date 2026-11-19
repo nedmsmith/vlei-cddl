@@ -1,0 +1,17 @@
+; ============================================================
+; OOR-Auth Rules Block
+; ============================================================
+; Rules block containing legal disclaimers
+
+oor-auth-r = said / ; Rules block SAID
+    oor-auth-r-properties
+
+oor-auth-r-boilerplate = {
+    "$id": "ECllqarpkZrSIWCb97XlMpEZZH3q4kc--FQ9mbkFMb_5"
+}
+
+oor-auth-r-properties = {
+    d: said ; Rules block SAID
+    usageDisclaimer: usageDisclaimer
+    issuanceDisclaimer: issuanceDisclaimer
+}

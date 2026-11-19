@@ -1,0 +1,14 @@
+; ============================================================
+; ECR Boilerplate
+; ============================================================
+; Engagement Context Role vLEI Credential boilerplate
+
+ecr-boilerplate = {
+    ? "$id": "EEy9PkikFcANV1l7EHukCeXqrzT1hNZjGlUk7wuMO5jw",
+    ? "$schema": "http://json-schema.org/draft-07/schema#",
+    ? title: "Legal Entity Engagement Context Role vLEI Credential",
+    ? description: "A vLEI Role Credential issued to representatives of a Legal Entity in other than official roles but in functional or other context of engagement",
+    ? type: "object",
+    ? credentialType: "LegalEntityEngagementContextRolevLEICredential",
+    ? version: "1.0.0"
+}

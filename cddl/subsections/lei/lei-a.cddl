@@ -1,0 +1,17 @@
+; ============================================================
+; LEI Attributes Block
+; ============================================================
+; Attributes block for Legal Entity vLEI Credential
+
+lei-a = said / lei-a-properties
+
+lei-a-boilerplate = { ; Attributes block boilerplate
+    "$id": "EJ6bFDLrv50bHmIDg-MSummpvYWsPa9CFygPUZyHoESj"
+}
+
+lei-a-properties = {
+    ? d: said ; lei Attributes block SAID
+    i: aid    ; AID of legal entity issuee
+    dt: date-time ; issuance date time
+    LEI: tstr ; LEI of the Legal Entity in ISO 17442 format
+}

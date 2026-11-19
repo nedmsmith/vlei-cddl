@@ -1,0 +1,20 @@
+; ============================================================
+; OOR Attributes Block
+; ============================================================
+; Attributes block for OOR vLEI Credential
+
+oor-a = said / ; Attributes block SAID
+    oor-a-properties
+
+oor-a-boilerplate = {
+        "$id": "ELDXjQ-FnKApK1DJhzmtKDcnfoJ9qusQr1Qz5g9MFt0o",
+}
+
+oor-a-properties = {
+        ? d: said ; Attributes block SAID
+        i: aid ; Person Issuee AID
+        dt: date-time ; Issuance date time
+        LEI: tstr ; LEI of the Legal Entity" in ISO17442 format
+        personLegalName: tstr ; Recipient name as provided during identity assurance
+        officialRole: tstr ; Official role title
+}

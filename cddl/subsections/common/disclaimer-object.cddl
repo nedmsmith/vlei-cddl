@@ -1,0 +1,14 @@
+; ============================================================
+; Disclaimer Objects
+; ============================================================
+; Reusable and concrete disclaimer object shapes
+
+; reusable object shape that preserves the l: field
+disclaimer-object = {
+  l: tstr
+}
+
+; concrete disclaimer objects that enforce the exact literal text
+usageDisclaimer = { l: usage-disclaimer-text }
+issuanceDisclaimer = { l: issuance-disclaimer-text }
+privacyDisclaimer = { l: privacy-disclaimer-text }

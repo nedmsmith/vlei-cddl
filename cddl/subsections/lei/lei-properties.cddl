@@ -1,0 +1,20 @@
+; ============================================================
+; LEI Properties Block
+; ============================================================
+; Top-level properties for Legal Entity vLEI Credential
+
+lei-properties = {
+; structural attributes
+    v: tstr,  ; Version
+    d: said,  ; Credential SAID
+    u: tstr,  ; One time use high entropy nonce
+    i: aid,   ; Credential Issuer - a QVI entity
+    ri: tstr, ; Credential status registry
+    s: said,  ; SAID of this lei schema
+; subject attributes
+    a: lei-a,
+; edge properties
+    e: lei-e,
+; rule properties
+    r: lei-r
+}

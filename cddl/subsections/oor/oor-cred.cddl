@@ -1,0 +1,6 @@
+; Official Organizational Role vLEI Credential
+
+oor-cred = [
+    oor-boilerplate,
+    oor-properties
+]

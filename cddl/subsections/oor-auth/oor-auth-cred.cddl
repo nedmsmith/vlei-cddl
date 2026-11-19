@@ -1,0 +1,6 @@
+; OOR Authorization vLEI Credential
+
+oor-auth-cred = [
+    oor-auth-boilerplate,
+    oor-auth-properties
+]

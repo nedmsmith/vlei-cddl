@@ -1,0 +1,19 @@
+; ============================================================
+; QVI Attributes Block
+; ============================================================
+; Attributes block for QVI vLEI Credential
+
+qvi-a = said / ; Attributes block SAID
+    qvi-a-properties
+
+qvi-a-boilerplate = { ; Attributes block boilerplate
+    "$id": "ELGgI0fkloqKWREXgqUfgS0bJybP1LChxCO3sqPSFHCj"
+}
+
+qvi-a-properties = {
+    ? d: said ; Attributes block SAID
+    i: aid ; QVI Issuee AID
+    dt: date-time ; Issuance date time
+    LEI: tstr ; LEI of the requesting Legal Entity in ISO 17442 format
+    ? gracePeriod: int .default 90;Allocated grace period default: 90
+}

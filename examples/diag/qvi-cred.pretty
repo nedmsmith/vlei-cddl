@@ -1,0 +1,77 @@
+82                                      # array(2)
+   a7                                   # map(7)
+      63                                # text(3)
+         246964                         # "$id"
+      78 2c                             # text(44)
+         45424e614e752d4d3950356367726e666c324676796d7934455f6a767878796a62373050527469414e6c4a79 # "EBNaNu-M9P5cgrnfl2Fvymy4E_jvxxyjb70PRtiANlJy"
+      67                                # text(7)
+         24736368656d61                 # "$schema"
+      78 27                             # text(39)
+         687474703a2f2f6a736f6e2d736368656d612e6f72672f64726166742d30372f736368656d6123 # "http://json-schema.org/draft-07/schema#"
+      65                                # text(5)
+         7469746c65                     # "title"
+      78 20                             # text(32)
+         5175616c696669656420764c4549204973737565722043726564656e7469616c # "Qualified vLEI Issuer Credential"
+      6b                                # text(11)
+         6465736372697074696f6e         # "description"
+      78 60                             # text(96)
+         4120764c45492043726564656e7469616c2069737375656420627920474c454946206f7220616e6f746865722051564920746f20656e746974696573207175616c696669656420746f20697373756520764c45492063726564656e7469616c73 # "A vLEI Credential issued by GLEIF or another QVI to entities qualified to issue vLEI credentials"
+      64                                # text(4)
+         74797065                       # "type"
+      66                                # text(6)
+         6f626a656374                   # "object"
+      6e                                # text(14)
+         63726564656e7469616c54797065   # "credentialType"
+      78 1d                             # text(29)
+         5175616c6966696564764c454949737375657243726564656e7469616c # "QualifiedvLEIIssuerCredential"
+      67                                # text(7)
+         76657273696f6e                 # "version"
+      65                                # text(5)
+         312e302e30                     # "1.0.0"
+   a7                                   # map(7)
+      61                                # text(1)
+         76                             # "v"
+      78 19                             # text(25)
+         414344433a6a736f6e2f757466382f62617365363475726c7e # "ACDC:json/utf8/base64url~"
+      61                                # text(1)
+         64                             # "d"
+      78 2c                             # text(44)
+         4549332d426b4a7146396e38624f5a583049713964394e37635f4b3451644c7a3852326b4637713870335630 # "EI3-BkJqF9n8bOZX0Iq9d9N7c_K4QdLz8R2kF7q8p3V0"
+      61                                # text(1)
+         69                             # "i"
+      78 2c                             # text(44)
+         45434e35712d50637a51786b6f6479564374563541334e75795744566f70675f475f4e7149476c6b59713763 # "ECN5q-PczQxkodyVCtV5A3NuyWDVopg_G_NqIGlkYq7c"
+      62                                # text(2)
+         7269                           # "ri"
+      78 2c                             # text(44)
+         454c653046387237696c6b334a5274614d4c797161326a53415873716b545675397950796e6b43515a71304d # "ELe0F8r7ilk3JRtaMLyqa2jSAXsqkTVu9yPynkCQZq0M"
+      61                                # text(1)
+         73                             # "s"
+      78 2c                             # text(44)
+         45424e614e752d4d3950356367726e666c324676796d7934455f6a767878796a62373050527469414e6c4a79 # "EBNaNu-M9P5cgrnfl2Fvymy4E_jvxxyjb70PRtiANlJy"
+      61                                # text(1)
+         61                             # "a"
+      a4                                # map(4)
+         61                             # text(1)
+            64                          # "d"
+         78 2b                          # text(43)
+            454b385a4c5f7830434b6c44306d336e3565586d3051315032643571395238543356305731583259335a34 # "EK8ZL_x0CKlD0m3n5eXm0Q1P2d5q9R8T3V0W1X2Y3Z4"
+         61                             # text(1)
+            69                          # "i"
+         78 2c                          # text(44)
+            454e5058703176517a5246364a774975532d6d703255385566314d6f41446f505f47715136325673445a5759 # "ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY"
+         63                             # text(3)
+            6c6569                      # "lei"
+         74                             # text(20)
+            353439333030314b4a5449494743384b31523132 # "5493001KJTIIGC8K1R12"
+         62                             # text(2)
+            6474                        # "dt"
+         78 19                          # text(25)
+            323032342d31312d31395431303a35303a30302b30303a3030 # "2024-11-19T10:50:00+00:00"
+      61                                # text(1)
+         65                             # "e"
+      a1                                # map(1)
+         61                             # text(1)
+            64                          # "d"
+         78 2c                          # text(44)
+            45457a5f3265594b52585845674c417276764b663145586b5a795855304a395f5148614e6267344635596838 # "EEz_2eYKRXXEgLArvvKf1EXkZyXU0J9_QHaNbg4F5Yh8"

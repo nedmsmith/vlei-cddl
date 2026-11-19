@@ -1,0 +1,6 @@
+; iXBRL Data Value Attestation
+
+ixbri-cred = [
+    ixbri-boilerplate,
+    ixbri-properties
+]

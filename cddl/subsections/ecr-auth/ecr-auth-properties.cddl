@@ -1,0 +1,16 @@
+; ============================================================
+; ECR-Auth Properties Block
+; ============================================================
+; Top-level properties for ECR-Auth vLEI Credential
+
+ecr-auth-properties = {
+    v: tstr ; Version
+    d: said ; Credential SAID
+    u: tstr ; One time use high entropy nonce
+    i: aid ; LE Issuer AID
+    ri: tstr ; Credential status registry
+    s: said ; Schema SAID
+    a: ecr-auth-a,
+    e: ecr-auth-e,
+    r: ecr-auth-r
+}

@@ -1,0 +1,13 @@
+; ============================================================
+; iXBRL Boilerplate
+; ============================================================
+; iXBRL Data Value Attestation boilerplate
+
+ixbri-boilerplate = {
+    ? "$id": "EMhvwOlyEJ9kN4PrwCpr9Jsv7TxPhiYveZ0oP3lJzdEi",
+    ? "$schema": "http://json-schema.org/draft-07/schema#",
+    ? title: "iXBRL Data Value Attestation",
+    ? description: "A data attestation against an iXBRL report, linked to either a vLEI OOR or vLEI ECR credential",
+    ? type: "object",
+    ? credentialType: "iXBRLDataAttestation"
+}

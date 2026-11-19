@@ -1,0 +1,6 @@
+; Legal Entity vLEI Credential
+
+lei-cred = [
+    lei-boilerplate,
+    lei-properties
+]

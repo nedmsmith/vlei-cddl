@@ -1,0 +1,10 @@
+; ============================================================
+; Common Primitives
+; ============================================================
+; Core data type primitives used across all vLEI credentials
+
+said-map = { d: said }
+aid-map = { i: aid }
+
+aid = tstr / bstr     ; an AID-like inception event digest identifier
+date-time = tstr      ; RFC3339-compatible date-time text

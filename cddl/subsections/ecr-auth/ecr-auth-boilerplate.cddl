@@ -1,0 +1,14 @@
+; ============================================================
+; ECR-Auth Boilerplate
+; ============================================================
+; ECR Authorization vLEI Credential boilerplate
+
+ecr-auth-boilerplate = {
+    ? "$id": "EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g",
+    ? "$schema": "http://json-schema.org/draft-07/schema#",
+    ? title: "ECR Authorization vLEI Credential",
+    ? description: "A vLEI Authorization Credential issued by a Legal Entity to a QVI for the authorization of ECR credentials",
+    ? type: "object",
+    ? credentialType: "ECRAuthorizationvLEICredential",
+    ? version: "1.0.0"
+}

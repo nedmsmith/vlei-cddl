@@ -1,0 +1,6 @@
+; Qualified vLEI Issuer Credential
+
+qvi-cred = [
+    qvi-boilerplate,
+    qvi-properties
+]

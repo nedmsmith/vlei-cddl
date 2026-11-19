@@ -1,0 +1,18 @@
+; ============================================================
+; LEI Rules Block
+; ============================================================
+; Rules block containing legal disclaimers
+
+lei-r = said / ; Rules block SAID
+    lei-r-properties
+
+lei-r-boilerplate = { ; Rules block boilerplate
+    "$id": "ECllqarpkZrSIWCb97XlMpEZZH3q4kc--FQ9mbkFMb_5"
+}
+
+lei-r-properties = {
+    d: said ; Rules block SAID
+    ; Legal disclaimers
+    usageDisclaimer: usageDisclaimer
+    issuanceDisclaimer: issuanceDisclaimer
+}

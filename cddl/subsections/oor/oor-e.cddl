@@ -1,0 +1,30 @@
+; ============================================================
+; OOR Edges Block
+; ============================================================
+; Edges block for linking to Auth and LE credentials
+
+oor-e = said / ; Edges block SAID
+    oor-e2auth-properties /
+    oor-e2le-properties
+
+; ============================================================
+; OOR Edges - Auth variant
+; ============================================================
+
+oor-e2auth-boilerplate = {
+    "$id": "EMsSqaJsthSBA4OINZ1_fxfNVkgEPF-Sg5fq-vXM7Z6b"
+}
+
+oor-e2auth-properties = {
+    d: said ; Edges block SAID
+    auth: node-schema-triple-oor-auth-le ; Chain to Auth vLEI credential from legal entity
+}
+
+; ============================================================
+; OOR Edges - LE variant
+; ============================================================
+
+oor-e2le-properties = {
+    d: said ; Edges block SAID
+    le: node-schema-pair-le ; Chain to Legal Entity vLEI credential
+}

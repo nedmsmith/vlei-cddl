@@ -1,0 +1,15 @@
+; ============================================================
+; QVI Properties Block
+; ============================================================
+; Top-level properties for QVI vLEI Credential
+
+qvi-properties = {
+    v: tstr ; Version
+    d: said ; Credential SAID
+    u: tstr ; One time use high entropy nonce
+    i: aid ; GLEIF Issuee AID
+    ri: tstr ; Credential status registry
+    s: said ; Schema SAID
+    a: qvi-a,
+    r: qvi-r
+}

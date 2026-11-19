@@ -1,0 +1,14 @@
+; ============================================================
+; LEI Boilerplate
+; ============================================================
+; Legal Entity vLEI Credential boilerplate metadata
+
+lei-boilerplate = {
+    ? "$id": "ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY",
+    ? "$schema": "http://json-schema.org/draft-07/schema#",
+    ? title: "Legal Entity vLEI Credential",
+    ? description: "A vLEI Credential issued by a Qualified vLEI issuer to a Legal Entity",
+    ? type: "object",
+    ? credentialType: "LegalEntityvLEICredential",
+    ? version: "1.0.0"
+}

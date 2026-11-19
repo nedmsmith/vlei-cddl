@@ -1,0 +1,15 @@
+; ============================================================
+; iXBRL Fact Definition
+; ============================================================
+; Individual iXBRL fact structure
+
+ixbri-fact = {
+    i: tstr ; XBRL data element ID
+    t: tstr ; XBRL element type (qname)
+    d: tstr ; Digest of canonicalized XBRL attribute
+    v: tstr ; Data value
+    f: tstr ; Data type
+    c: tstr ; XBRL Element Context
+    e: tstr ; Unknown
+    p: tstr ; Date range
+}

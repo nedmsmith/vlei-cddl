@@ -1,0 +1,16 @@
+; ============================================================
+; ECR Properties Block
+; ============================================================
+; Top-level properties for ECR vLEI Credential
+
+ecr-properties = {
+    v: tstr ; Version
+    d: said ; Credential SAID
+    u: tstr ; A high entropy nonce
+    i: aid ; QVI or LE Issuer AID
+    ri: tstr ; Credential status registry
+    s: said ; Schema SAID
+    a: ecr-a,
+    e: ecr-e,
+    r: ecr-r
+}

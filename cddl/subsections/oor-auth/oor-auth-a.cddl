@@ -1,0 +1,21 @@
+; ============================================================
+; OOR-Auth Attributes Block
+; ============================================================
+; Attributes block for OOR-Auth vLEI Credential
+
+oor-auth-a = said / ; Attributes block SAID
+    oor-auth-a-properties
+
+oor-auth-a-boilerplate = {
+    "$id": "EPli-kppZ4gj8g4i3-FUx3ZG1H_UrMhXwzyP1E6uAot6"
+}
+
+oor-auth-a-properties = {
+    ? d: said ; Attributes block SAID
+    i: aid ; QVI Issuee AID
+    dt: date-time ; Issuance date time
+    AID: aid ; AID of the intended recipient of the ECR credential
+    LEI: tstr ; LEI of the requesting Legal Entity
+    personLegalName: tstr ; Requested recipient name
+    officialRole: tstr ; Requested role description
+}

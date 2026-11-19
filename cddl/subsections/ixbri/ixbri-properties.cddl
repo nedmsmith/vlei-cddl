@@ -1,0 +1,14 @@
+; ============================================================
+; iXBRL Properties Block
+; ============================================================
+; Top-level properties for iXBRL Data Value Attestation
+
+ixbri-properties = {
+    v: tstr ; Version
+    d: said ; SAID of this credential
+    i: aid ; AID of the issuer
+    ri: tstr ; Credential status registry
+    s: said ; Schema SAID
+    a: ixbri-a
+    e: ixbri-e
+}

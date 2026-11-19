@@ -1,0 +1,17 @@
+; ============================================================
+; ECR Rules Block
+; ============================================================
+; Rules block containing legal disclaimers
+
+ecr-r = said / ; Rules block SAID
+    ecr-r-properties
+
+ecr-r-boilerplate = {
+    "$id": "ECllqarpkZrSIWCb97XlMpEZZH3q4kc--FQ9mbkFMb_5"
+}
+
+ecr-r-properties = {
+    d: said ; Rules block SAID
+    usageDisclaimer: usageDisclaimer
+    issuanceDisclaimer: issuanceDisclaimer
+}

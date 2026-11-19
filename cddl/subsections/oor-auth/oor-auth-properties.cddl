@@ -1,0 +1,16 @@
+; ============================================================
+; OOR-Auth Properties Block
+; ============================================================
+; Top-level properties for OOR-Auth vLEI Credential
+
+oor-auth-properties = {
+    v: tstr ; Version
+    d: said ; Credential SAID
+    u: tstr ; Single use high entropy nonce
+    i: aid ; LE Issuer AID
+    ri: tstr ; Credential status registry
+    s: said ; Schema SAID
+    a: oor-auth-a,
+    e: oor-auth-e,
+    r: oor-auth-r
+}

@@ -1,0 +1,13 @@
+; ------------------------------------------------------------
+; vLEI CDDL Schema
+; ------------------------------------------------------------
+
+vlei-cred =
+    lei-cred /
+    oor-cred /
+    ecr-cred /
+    qvi-cred /
+    oor-auth-cred /
+    ecr-auth-cred /
+    ixbri-cred
+

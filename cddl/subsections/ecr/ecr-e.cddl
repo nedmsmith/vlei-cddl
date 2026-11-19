@@ -1,0 +1,34 @@
+; ============================================================
+; ECR Edges Block
+; ============================================================
+; Edges block for linking to Auth and LE credentials
+
+ecr-e = said / ; Edges block SAID
+    ecr-e2auth-properties /
+    ecr-e2le-properties
+
+; ============================================================
+; ECR Edges - Auth variant
+; ============================================================
+
+ecr-e2auth-boilerplate = {
+    "$id": "EEM9OvWMEmAfAY0BV2kXatSc8WM13QW1B5y33E8z4f33"
+}
+
+ecr-e2auth-properties = {
+    d: said ; Edges block SAID
+    auth: node-schema-triple-ecr-auth-le ; Chain to Auth vLEI credential from legal entity
+}
+
+; ============================================================
+; ECR Edges - LE variant
+; ============================================================
+
+ecr-e2le-boilerplate = { ; Edges block for issuance from Legal Entity
+    "$id": "EHeZGaLBhCc_-sAcyAEgFFeCkxgnqCubPOBuEvoh9jHX"
+}
+
+ecr-e2le-properties = {
+    d: said ; SAID of edges block
+    le: node-schema-pair-le ; Chain to legal entity vLEI credential
+}

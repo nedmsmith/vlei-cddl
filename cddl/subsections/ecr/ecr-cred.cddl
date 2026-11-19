@@ -1,0 +1,6 @@
+; Engagement Context Role vLEI Credential
+
+ecr-cred = [
+    ecr-boilerplate,
+    ecr-properties
+]

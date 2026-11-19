@@ -1,0 +1,23 @@
+; ============================================================
+; Node-Schema Triples
+; ============================================================
+; Schema node triples for OOR and ECR authorization credentials
+
+node-schema-triple = {
+  n: said ; node SAID (issuer credential SAID)
+  s: said ; schema SAID (SAID of required schema)
+  o: tstr ; operator
+}
+
+; auth-le specific triple that constrains s and o to the consts
+node-schema-triple-ecr-auth-le = {
+  n: said
+  s: "EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g"
+  o: "I2I"
+}
+
+node-schema-triple-oor-auth-le = {
+  n: said
+  s: "EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E"
+  o: "I2I"
+}

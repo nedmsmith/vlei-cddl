@@ -1,0 +1,34 @@
+; ============================================================
+; iXBRL Edges Block
+; ============================================================
+; Edges block for linking to OOR or ECR credentials
+
+ixbri-e = ixbri-e2oor-properties / ixbri-e2ecr-properties
+
+; ============================================================
+; iXBRL Edges - OOR variant
+; ============================================================
+
+; Option 1: OOR Credential edge
+ixbri-e2oor-boilerplate = { ; Chained vLEI OOR Credential
+    "$id": "EGdpNTt_v5NAIhzWZjisHE5oaYnoJVOC7iVFySw9eFKX"
+}
+
+ixbri-e2oor-properties = {
+    d: said ; SAID of edge block containing OOR Credential node
+    oor: node-schema-pair-oor-ixbri ; node SAID of signer OOR credential
+}
+
+; ============================================================
+; iXBRL Edges - ECR variant
+; ============================================================
+
+; Option 2: ECR Credential edge
+ixbri-e2ecr-boilerplate = { ; Chained vLEI ECR Credential{
+    "$id": "EO2AOkCvsjm5RyQYAPpUZP96pbXlPGym57VemjxlOlMe"
+}
+
+ixbri-e2ecr-properties = {
+    d: said ; { SAID of edge block containing ECR Credential node
+    ecr: node-schema-pair-ecr-ixbri ; node SAID of signer ECR credential
+}

@@ -1,0 +1,90 @@
+82                                      # array(2)
+   a7                                   # map(7)
+      63                                # text(3)
+         246964                         # "$id"
+      78 2c                             # text(44)
+         454e5058703176517a5246364a774975532d6d703255385566314d6f41446f505f47715136325673445a5759 # "ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY"
+      67                                # text(7)
+         24736368656d61                 # "$schema"
+      78 27                             # text(39)
+         687474703a2f2f6a736f6e2d736368656d612e6f72672f64726166742d30372f736368656d6123 # "http://json-schema.org/draft-07/schema#"
+      65                                # text(5)
+         7469746c65                     # "title"
+      78 1c                             # text(28)
+         4c6567616c20456e7469747920764c45492043726564656e7469616c # "Legal Entity vLEI Credential"
+      6b                                # text(11)
+         6465736372697074696f6e         # "description"
+      78 45                             # text(69)
+         4120764c45492043726564656e7469616c206973737565642062792061205175616c696669656420764c45492069737375657220746f2061204c6567616c20456e74697479 # "A vLEI Credential issued by a Qualified vLEI issuer to a Legal Entity"
+      64                                # text(4)
+         74797065                       # "type"
+      66                                # text(6)
+         6f626a656374                   # "object"
+      6e                                # text(14)
+         63726564656e7469616c54797065   # "credentialType"
+      78 19                             # text(25)
+         4c6567616c456e74697479764c454943726564656e7469616c # "LegalEntityvLEICredential"
+      67                                # text(7)
+         76657273696f6e                 # "version"
+      65                                # text(5)
+         312e302e30                     # "1.0.0"
+   a8                                   # map(8)
+      61                                # text(1)
+         76                             # "v"
+      78 19                             # text(25)
+         414344433a6a736f6e2f757466382f62617365363475726c7e # "ACDC:json/utf8/base64url~"
+      61                                # text(1)
+         64                             # "d"
+      78 2c                             # text(44)
+         454266646c75385232374662782d6568727177496d6e4b2d38436d37397371624151344d6d7645415971616f # "EBfdlu8R27Fbx-ehrqwImnK-8Cm79sqbAQ4MmvEAYqao"
+      61                                # text(1)
+         69                             # "i"
+      78 2c                             # text(44)
+         45434e35712d50637a51786b6f6479564374563541334e75795744566f70675f475f4e7149476c6b59713763 # "ECN5q-PczQxkodyVCtV5A3NuyWDVopg_G_NqIGlkYq7c"
+      62                                # text(2)
+         7269                           # "ri"
+      78 2c                             # text(44)
+         454c653046387237696c6b334a5274614d4c797161326a53415873716b545675397950796e6b43515a71304d # "ELe0F8r7ilk3JRtaMLyqa2jSAXsqkTVu9yPynkCQZq0M"
+      61                                # text(1)
+         73                             # "s"
+      78 2c                             # text(44)
+         454e5058703176517a5246364a774975532d6d703255385566314d6f41446f505f47715136325673445a5759 # "ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY"
+      61                                # text(1)
+         61                             # "a"
+      a4                                # map(4)
+         61                             # text(1)
+            64                          # "d"
+         78 2c                          # text(44)
+            454a5f386548664168315246664b486b4656676d50384b5a54613478564538786a4b6238476b4b4871774a34 # "EJ_8eHfAh1RFfKHkFVgmP8KZTa4xVE8xjKb8GkKHqwJ4"
+         61                             # text(1)
+            69                          # "i"
+         78 2c                          # text(44)
+            454e5058703176517a5246364a774975532d6d703255385566314d6f41446f505f47715136325673445a5759 # "ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY"
+         63                             # text(3)
+            6c6569                      # "lei"
+         74                             # text(20)
+            353439333030314b4a5449494743384b31523132 # "5493001KJTIIGC8K1R12"
+         62                             # text(2)
+            6474                        # "dt"
+         78 19                          # text(25)
+            323032342d31312d31395431303a35303a30302b30303a3030 # "2024-11-19T10:50:00+00:00"
+      61                                # text(1)
+         65                             # "e"
+      a1                                # map(1)
+         61                             # text(1)
+            64                          # "d"
+         78 2c                          # text(44)
+            45457a5f3265594b52585845674c417276764b663145586b5a795855304a395f5148614e6267344635596838 # "EEz_2eYKRXXEgLArvvKf1EXkZyXU0J9_QHaNbg4F5Yh8"
+      61                                # text(1)
+         75                             # "u"
+      82                                # array(2)
+         a1                             # map(1)
+            61                          # text(1)
+               6c                       # "l"
+            79 015a                     # text(346)
+               5573616765206f6620612076616c69642c20756e657870697265642c20616e64206e6f6e2d7265766f6b656420764c45492043726564656e7469616c2c20617320646566696e656420696e20746865206173736f6369617465642045636f73797374656d20476f7665726e616e6365204672616d65776f726b2c20646f6573206e6f7420617373657274207468617420746865204c6567616c20456e74697479206973207472757374776f727468792c20686f6e6573742c20726570757461626c6520696e2069747320627573696e657373206465616c696e67732c207361666520746f20646f20627573696e65737320776974682c206f7220636f6d706c69616e74207769746820766c65692d616e79206c617773206f72207468617420616e20696d706c696564206f7220657870726573736c7920696e74656e64656420707572706f73652077696c6c2062652066756c66696c6c65642e # "Usage of a valid, unexpired, and non-revoked vLEI Credential, as defined in the associated Ecosystem Governance Framework, does not assert that the Legal Entity is trustworthy, honest, reputable in its business dealings, safe to do business with, or compliant with vlei-any laws or that an implied or expressly intended purpose will be fulfilled."
+         a1                             # map(1)
+            61                          # text(1)
+               6c                       # "l"
+            79 01c3                     # text(451)
+               416c6c20696e666f726d6174696f6e20696e20612076616c69642c20756e657870697265642c20616e64206e6f6e2d7265766f6b656420764c45492043726564656e7469616c2c20617320646566696e656420696e20746865206173736f6369617465642045636f73797374656d20476f7665726e616e6365204672616d65776f726b2c206973206163637572617465206173206f66207468652064617465207468652076616c69646174696f6e2070726f636573732077617320636f6d706c6574652e2054686520764c45492043726564656e7469616c20686173206265656e2069737375656420746f20746865206c6567616c20656e74697479206f7220706572736f6e206e616d656420696e2074686520764c45492043726564656e7469616c20617320746865207375626a6563743b20616e6420746865207175616c696669656420764c4549204973737565722065786572636973656420726561736f6e61626c65206361726520746f20706572666f726d207468652076616c69646174696f6e2070726f636573732073657420666f72746820696e2074686520764c45492045636f73797374656d20476f7665726e616e6365204672616d65776f726b2e # "All information in a valid, unexpired, and non-revoked vLEI Credential, as defined in the associated Ecosystem Governance Framework, is accurate as of the date the validation process was complete. The vLEI Credential has been issued to the legal entity or person named in the vLEI Credential as the subject; and the qualified vLEI Issuer exercised reasonable care to perform the validation process set forth in the vLEI Ecosystem Governance Framework."

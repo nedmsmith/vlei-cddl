@@ -1,0 +1,21 @@
+; ============================================================
+; ECR-Auth Attributes Block
+; ============================================================
+; Attributes block for ECR-Auth vLEI Credential
+
+ecr-auth-a = said / ; Attributes block SAID
+    ecr-auth-a-properties
+
+ecr-auth-a-boilerplate = { ; Attributes block boilerplate
+    "$id": "EBMwtCJt7LUfA9u0jmZ1cAoCavZFIBmZBmlufYeX4gdy"
+}
+
+ecr-auth-a-properties = {
+    ? d: said ; Attributes block SAID
+    i: aid ; QVI Issuee AID
+    dt: date-time ; Issuance date time
+    AID: aid ; AID of the intended recipient of the ECR credential
+    LEI: tstr ; LEI of the requesting Legal Entity in iso17442 format
+    personLegalName: tstr ; Requested recipient name as provided during identity assurance
+    engagementContextRole: tstr ; Requested role description i.e. 'Head of Standards'
+}

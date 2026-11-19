@@ -1,0 +1,16 @@
+; ============================================================
+; OOR Properties Block
+; ============================================================
+; Top-level properties for OOR vLEI Credential
+
+oor-properties = {
+    v: tstr ; Version
+    d: said ; Credential SAID
+    u: tstr ; One time use high entropy nonce
+    i: aid ; QVI Issuer AID
+    ri: tstr ; Credential status registry 
+    s: said ; Schema SAID
+    a: oor-a,
+    e: oor-e,
+    r: oor-r
+}

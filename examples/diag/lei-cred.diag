@@ -1,0 +1,38 @@
+; Legal Entity vLEI Credential example
+; A vLEI credential issued by a Qualified vLEI issuer to a Legal Entity
+
+[
+  {
+    "$id": "ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Legal Entity vLEI Credential",
+    "description": "A vLEI Credential issued by a Qualified vLEI issuer to a Legal Entity",
+    "type": "object",
+    "credentialType": "LegalEntityvLEICredential",
+    "version": "1.0.0"
+  },
+  {
+    "v": "ACDC:json/utf8/base64url~",
+    "d": "EBfdlu8R27Fbx-ehrqwImnK-8Cm79sqbAQ4MmvEAYqao",
+    "i": "ECN5q-PczQxkodyVCtV5A3NuyWDVopg_G_NqIGlkYq7c",
+    "ri": "ELe0F8r7ilk3JRtaMLyqa2jSAXsqkTVu9yPynkCQZq0M",
+    "s": "ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY",
+    "a": {
+      "d": "EJ_8eHfAh1RFfKHkFVgmP8KZTa4xVE8xjKb8GkKHqwJ4",
+      "i": "ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY",
+      "lei": "5493001KJTIIGC8K1R12",
+      "dt": "2024-11-19T10:50:00+00:00"
+    },
+    "e": {
+      "d": "EEz_2eYKRXXEgLArvvKf1EXkZyXU0J9_QHaNbg4F5Yh8"
+    },
+    "u": [
+      {
+        "l": "Usage of a valid, unexpired, and non-revoked vLEI Credential, as defined in the associated Ecosystem Governance Framework, does not assert that the Legal Entity is trustworthy, honest, reputable in its business dealings, safe to do business with, or compliant with vlei-any laws or that an implied or expressly intended purpose will be fulfilled."
+      },
+      {
+        "l": "All information in a valid, unexpired, and non-revoked vLEI Credential, as defined in the associated Ecosystem Governance Framework, is accurate as of the date the validation process was complete. The vLEI Credential has been issued to the legal entity or person named in the vLEI Credential as the subject; and the qualified vLEI Issuer exercised reasonable care to perform the validation process set forth in the vLEI Ecosystem Governance Framework."
+      }
+    ]
+  }
+]
