@@ -77,7 +77,7 @@ node references, and disclaimer types used by those credentials.
 The top-level vLEI defines the supported vLEI credential types.
 
 ~~~ cddl
-{::include cddl/vlei-root.cddl}
+{::include cddl/vlei-cred.cddl}
 ~~~
 
 ## Legal Entity vLEI Credential
@@ -87,7 +87,7 @@ The Legal Entity credential defines issuer, subject, edge, and rule blocks.
 ### Top-level Credential Definition
 
 ~~~ cddl
-{::include cddl/vlei-root-lei.cddl}
+{::include cddl/subsections/lei/lei-cred.cddl}
 ~~~
 
 ### Credential Properties
@@ -110,7 +110,7 @@ the issuer qualification credential.
 ### Top-level Credential Definition
 
 ~~~ cddl
-{::include cddl/vlei-root-qvi.cddl}
+{::include cddl/subsections/qvi/qvi-cred.cddl}
 ~~~
 
 ### Credential Properties
@@ -133,7 +133,7 @@ authorization or Legal Entity credential edges.
 ### Top-level Credential Definition
 
 ~~~ cddl
-{::include cddl/vlei-root-oor.cddl}
+{::include cddl/subsections/oor/oor-cred.cddl}
 ~~~
 
 ### Credential Properties
@@ -156,7 +156,7 @@ authorization or Legal Entity credential edges.
 ### Top-level Credential Definition
 
 ~~~ cddl
-{::include cddl/vlei-root-ecr.cddl}
+{::include cddl/subsections/ecr/ecr-cred.cddl}
 ~~~
 
 ### Credential Properties
@@ -179,7 +179,7 @@ recipient, role, Legal Entity edge, and disclaimer blocks.
 ### Top-level Credential Definition
 
 ~~~ cddl
-{::include cddl/vlei-root-oor-auth.cddl}
+{::include cddl/subsections/oor-auth/oor-auth-cred.cddl}
 ~~~
 
 ### Credential Properties
@@ -202,7 +202,7 @@ recipient, role, Legal Entity edge, and disclaimer blocks.
 ### Top-level Credential Definition
 
 ~~~ cddl
-{::include cddl/vlei-root-ecr-auth.cddl}
+{::include cddl/subsections/ecr-auth/ecr-auth-cred.cddl}
 ~~~
 
 ### Credential Properties
@@ -225,7 +225,7 @@ extracted from iXBRL reports, linked to either a vLEI OOR or vLEI ECR credential
 ### Top-level Credential Definition
 
 ~~~ cddl
-{::include cddl/vlei-root-ixbri.cddl}
+{::include cddl/subsections/ixbri/ixbri-cred.cddl}
 ~~~
 
 ### Credential Properties
