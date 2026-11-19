@@ -1,0 +1,8 @@
+# Generated build artifacts
+*.html
+*.txt
+*.xml
+
+# Submodule
+lib/
+
