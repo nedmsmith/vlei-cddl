@@ -2,7 +2,7 @@
 
 This is the working area for the IETF Internet-Draft, "vLEI Credential Definition Language".
 
-## Editor's Copy
+## Editor's Copypwd
 
 [Editor's draft (Markdown)](draft-nsmith-vlei-cddl.md)
 
