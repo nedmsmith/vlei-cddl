@@ -20,7 +20,7 @@ draft-nsmith-vlei-cddl.xml: cddl/subsections/ecr-auth/ecr-auth-boilerplate.cddl
 draft-nsmith-vlei-cddl.xml: cddl/subsections/ixbri/ixbri-cred.cddl
 draft-nsmith-vlei-cddl.xml: cddl/subsections/ixbri/ixbri-properties.cddl
 draft-nsmith-vlei-cddl.xml: cddl/subsections/ixbri/ixbri-boilerplate.cddl
-draft-nsmith-vlei-cddl.xml: imports/said-d9f9bac.cddl
+draft-nsmith-vlei-cddl.xml: imports/said-0.1.1.cddl
 draft-nsmith-vlei-cddl.xml: cddl/subsections/common/said-map.cddl
 draft-nsmith-vlei-cddl.xml: cddl/subsections/common/node-schema-pair.cddl
 draft-nsmith-vlei-cddl.xml: cddl/subsections/common/node-schema-triple.cddl
