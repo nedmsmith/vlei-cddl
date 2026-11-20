@@ -11,9 +11,36 @@ else
 	    -b main https://github.com/martinthomson/i-d-template $(LIBDIR)
 endif
 
-# SAID artifact versions (pinned to published releases)
-SAID_CDDL_VERSION := 0.1.1
-SAID_JSON_VERSION := 0.1.1
+# SAID artifact versions
+# SAID_CDDL_VERSION_OVERRIDE can be set via environment for regression testing
+# Example: SAID_CDDL_VERSION_OVERRIDE=0.1.0 make imports
+#
+# Normal operation: auto-detect latest from imports/ folder
+# Regression testing: set env variable to test specific version
+
+SAID_CDDL_VERSION_OVERRIDE ?=
+SAID_JSON_VERSION_OVERRIDE ?=
+
+# Auto-detect latest versions from imports/ folder
+# If override is set, use that; otherwise use latest found
+_SAID_CDDL_FILES := $(wildcard imports/said-*.cddl)
+_SAID_JSON_FILES := $(wildcard imports/said-*.schema.json)
+
+ifeq ($(SAID_CDDL_VERSION_OVERRIDE),)
+  # Auto-detect: extract version from latest file (sorted, last is highest)
+  _SAID_CDDL_LATEST := $(lastword $(sort $(_SAID_CDDL_FILES)))
+  SAID_CDDL_VERSION := $(if $(_SAID_CDDL_LATEST),$(patsubst imports/said-%.cddl,%,$(_SAID_CDDL_LATEST)),0.1.1)
+else
+  SAID_CDDL_VERSION := $(SAID_CDDL_VERSION_OVERRIDE)
+endif
+
+ifeq ($(SAID_JSON_VERSION_OVERRIDE),)
+  _SAID_JSON_LATEST := $(lastword $(sort $(_SAID_JSON_FILES)))
+  SAID_JSON_VERSION := $(if $(_SAID_JSON_LATEST),$(patsubst imports/said-%.schema.json,%,$(_SAID_JSON_LATEST)),0.1.1)
+else
+  SAID_JSON_VERSION := $(SAID_JSON_VERSION_OVERRIDE)
+endif
+
 SAID_CDDL := imports/said-$(SAID_CDDL_VERSION).cddl
 SAID_JSON := imports/said-$(SAID_JSON_VERSION).schema.json
 SAID_CDDL_LINK := imports/said.cddl
