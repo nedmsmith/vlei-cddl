@@ -1,0 +1,126 @@
+# Makefile.imports.template
+# 
+# Reusable pattern for importing external CDDL and JSON schemas
+# Copy and adapt for your project
+#
+# Usage:
+#   include Makefile.imports  (or customize and rename)
+#
+# Features:
+#   - Version-pinned downloads from GitHub releases
+#   - Auto-detect latest version from imports/ folder
+#   - Symlink targets for draft autogen
+#   - Environment variable overrides for regression testing
+
+# ============================================================================
+# SCHEMA IMPORT CONFIGURATION
+# ============================================================================
+# Customize these variables for your external schema sources
+
+SCHEMA_NAME := said
+SCHEMA_REPO := WebOfTrust/ietf-said
+SCHEMA_OWNER_REPO := $(SCHEMA_REPO)
+
+# Release tags (customize based on repo structure)
+# Example: cddl-0.1.1, jsons-0.1.1, openapi-1.0.0
+CDDL_RELEASE_TAG := cddl
+JSON_RELEASE_TAG := jsons
+
+# File extensions
+CDDL_EXT := .cddl
+JSON_EXT := .schema.json
+
+# ============================================================================
+# VERSION MANAGEMENT
+# ============================================================================
+# Support override via environment variables for regression testing
+
+SCHEMA_CDDL_VERSION_OVERRIDE ?=
+SCHEMA_JSON_VERSION_OVERRIDE ?=
+
+# Auto-detect latest versions from imports/ folder
+_SCHEMA_CDDL_FILES := $(wildcard imports/$(SCHEMA_NAME)-*$(CDDL_EXT))
+_SCHEMA_JSON_FILES := $(wildcard imports/$(SCHEMA_NAME)-*$(JSON_EXT))
+
+ifeq ($(SCHEMA_CDDL_VERSION_OVERRIDE),)
+  _SCHEMA_CDDL_LATEST := $(lastword $(sort $(_SCHEMA_CDDL_FILES)))
+  SCHEMA_CDDL_VERSION := $(if $(_SCHEMA_CDDL_LATEST),$(patsubst imports/$(SCHEMA_NAME)-%$(CDDL_EXT),%,$(_SCHEMA_CDDL_LATEST)),0.1.1)
+else
+  SCHEMA_CDDL_VERSION := $(SCHEMA_CDDL_VERSION_OVERRIDE)
+endif
+
+ifeq ($(SCHEMA_JSON_VERSION_OVERRIDE),)
+  _SCHEMA_JSON_LATEST := $(lastword $(sort $(_SCHEMA_JSON_FILES)))
+  SCHEMA_JSON_VERSION := $(if $(_SCHEMA_JSON_LATEST),$(patsubst imports/$(SCHEMA_NAME)-%$(JSON_EXT),%,$(_SCHEMA_JSON_LATEST)),0.1.1)
+else
+  SCHEMA_JSON_VERSION := $(SCHEMA_JSON_VERSION_OVERRIDE)
+endif
+
+SCHEMA_CDDL := imports/$(SCHEMA_NAME)-$(SCHEMA_CDDL_VERSION)$(CDDL_EXT)
+SCHEMA_JSON := imports/$(SCHEMA_NAME)-$(SCHEMA_JSON_VERSION)$(JSON_EXT)
+SCHEMA_CDDL_LINK := imports/$(SCHEMA_NAME)$(CDDL_EXT)
+SCHEMA_JSON_LINK := imports/$(SCHEMA_NAME)$(JSON_EXT)
+
+# ============================================================================
+# DOWNLOAD URLS
+# ============================================================================
+# Adjust patterns based on your upstream repository structure
+
+SCHEMA_CDDL_URL := https://github.com/$(SCHEMA_OWNER_REPO)/releases/download/$(CDDL_RELEASE_TAG)-$(SCHEMA_CDDL_VERSION)/$(SCHEMA_NAME)$(CDDL_EXT)
+SCHEMA_JSON_URL := https://github.com/$(SCHEMA_OWNER_REPO)/releases/download/$(JSON_RELEASE_TAG)-$(SCHEMA_JSON_VERSION)/$(SCHEMA_NAME)$(JSON_EXT)
+
+# ============================================================================
+# MAKEFILE TARGETS
+# ============================================================================
+
+imports: imports-cddl imports-json
+
+imports-cddl: $(SCHEMA_CDDL_LINK)
+
+imports-json: $(SCHEMA_JSON_LINK)
+
+$(SCHEMA_CDDL):
+	@echo "Fetching $(SCHEMA_NAME) CDDL from release $(CDDL_RELEASE_TAG)-$(SCHEMA_CDDL_VERSION)..."
+	curl -s -L -f $(SCHEMA_CDDL_URL) -o $@ || \
+		(rm -f $@; echo "✗ Failed to fetch $(SCHEMA_CDDL_URL)"; exit 1)
+	@echo "✓ $(SCHEMA_CDDL)"
+
+$(SCHEMA_JSON):
+	@echo "Fetching $(SCHEMA_NAME) JSON from release $(JSON_RELEASE_TAG)-$(SCHEMA_JSON_VERSION)..."
+	curl -s -L -f $(SCHEMA_JSON_URL) -o $@ || \
+		(rm -f $@; echo "✗ Failed to fetch $(SCHEMA_JSON_URL)"; exit 1)
+	@echo "✓ $(SCHEMA_JSON)"
+
+$(SCHEMA_CDDL_LINK): $(SCHEMA_CDDL)
+	@rm -f $@
+	@ln -s $(notdir $(SCHEMA_CDDL)) $@
+	@echo "✓ $(SCHEMA_CDDL_LINK) -> $(notdir $(SCHEMA_CDDL))"
+
+$(SCHEMA_JSON_LINK): $(SCHEMA_JSON)
+	@rm -f $@
+	@ln -s $(notdir $(SCHEMA_JSON)) $@
+	@echo "✓ $(SCHEMA_JSON_LINK) -> $(notdir $(SCHEMA_JSON))"
+
+clean-imports:
+	@rm -f imports/$(SCHEMA_NAME)-*$(CDDL_EXT) imports/$(SCHEMA_NAME)-*$(JSON_EXT)
+	@rm -f imports/$(SCHEMA_NAME)$(CDDL_EXT) imports/$(SCHEMA_NAME)$(JSON_EXT)
+	@echo "✓ Cleaned imports"
+
+.PHONY: imports imports-cddl imports-json clean-imports
+
+# ============================================================================
+# USAGE & ENVIRONMENT VARIABLES
+# ============================================================================
+#
+# Normal operation (auto-detect latest):
+#   make imports
+#
+# Regression testing (specific version):
+#   SCHEMA_CDDL_VERSION_OVERRIDE=0.1.0 \
+#   SCHEMA_JSON_VERSION_OVERRIDE=0.1.0 \
+#   make imports
+#
+# Integration in draft files:
+#   {::include imports/said.cddl}
+#   Include symlink, not versioned file, so autogen always uses correct version
+#

@@ -29,3 +29,19 @@ The CDDL schema is modular and organized by credential type:
 * `cddl/subsections/` - Credential type subsections
 * `imports/said.cddl` - External SAID type definitions
 * `examples/` - Example credentials and diagnostics
+
+## External Imports
+
+This project imports CDDL and JSON schemas from upstream repositories:
+
+* **SAID schemas** from [WebOfTrust/ietf-said](https://github.com/WebOfTrust/ietf-said)
+  * Auto-detects latest version: `make imports`
+  * Regression test specific version: `SAID_CDDL_VERSION_OVERRIDE=0.1.0 make imports`
+  * See [imports/README.md](imports/README.md) for details
+
+### Reusable Pattern for Other Projects
+
+The import pattern used here is documented as a template for other projects:
+* [Makefile.imports.template](Makefile.imports.template) - Reusable Makefile snippet
+* [imports/README.md](imports/README.md) - Full documentation including setup checklist
+* See "Template for Other Projects" section in imports/README.md
