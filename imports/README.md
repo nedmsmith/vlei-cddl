@@ -2,17 +2,17 @@
 
 This folder contains imported CDDL schemas from external repositories.
 
-## said.cddl
+## said.cddl & said.schema.json
 
-The SAID (Self-Addressed Identifier Digest) schema is imported from the [WebOfTrust/ietf-said](https://github.com/WebOfTrust/ietf-said) repository.
+The SAID (Self-Addressed Identifier Digest) schemas are imported from the [WebOfTrust/ietf-said](https://github.com/WebOfTrust/ietf-said) repository.
 
 ### Versioning
 
 SAID artifacts are pinned to immutable GitHub releases. This ensures reproducibility and traceability.
 
-**Current versions**:
+**Current version: 0.1.1**
 - CDDL: `said-0.1.1.cddl` (from GitHub release `cddl-0.1.1`)
-- JSON Schema: `said-0.1.0.schema.json` (from GitHub release `jsons-0.1.0`)
+- JSON Schema: `said-0.1.1.schema.json` (from GitHub release `jsons-0.1.1`)
 
 ### Setup
 
@@ -21,7 +21,7 @@ Fetch the SAID artifacts from the pinned GitHub releases:
 ```bash
 make imports        # Fetch both CDDL and JSON artifacts
 make imports-cddl   # Fetch only CDDL from release cddl-0.1.1
-make imports-jsons  # Fetch only JSON Schema from release jsons-0.1.0
+make imports-jsons  # Fetch only JSON Schema from release jsons-0.1.1
 ```
 
 Or manually:
@@ -32,8 +32,8 @@ curl -L https://github.com/WebOfTrust/ietf-said/releases/download/cddl-0.1.1/sai
   -o imports/said-0.1.1.cddl
 
 # JSON Schema
-curl -L https://github.com/WebOfTrust/ietf-said/releases/download/jsons-0.1.0/said.schema.json \
-  -o imports/said-0.1.0.schema.json
+curl -L https://github.com/WebOfTrust/ietf-said/releases/download/jsons-0.1.1/said.schema.json \
+  -o imports/said-0.1.1.schema.json
 ```
 
 ### Integration
@@ -48,7 +48,7 @@ To reference the JSON Schema:
 
 ```json
 {
-  "$schema": "imports/said-0.1.0.schema.json"
+  "$schema": "imports/said-0.1.1.schema.json"
 }
 ```
 
