@@ -37,4 +37,8 @@ $(SAID_JSON):
 	curl -s -L -f $(SAID_JSON_URL) -o $@ || (rm -f $@; echo "✗ Failed to fetch $(SAID_JSON_URL)"; exit 1)
 	@echo "✓ $(SAID_JSON)"
 
-.PHONY: imports imports-cddl imports-jsons
+clean-imports:
+	@rm -f imports/said-*.cddl imports/said-*.schema.json
+	@echo "✓ Cleaned imports"
+
+.PHONY: imports imports-cddl imports-jsons clean-imports
