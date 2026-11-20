@@ -4,43 +4,58 @@ This folder contains imported CDDL schemas from external repositories.
 
 ## said.cddl
 
-The `said.cddl` file is imported from the [draft-ssmith-said](https://github.com/SmithSamuelM/draft-ssmith-said) repository.
+The SAID (Self-Addressed Identifier Digest) schema is imported from the [WebOfTrust/ietf-said](https://github.com/WebOfTrust/ietf-said) repository.
 
 ### Versioning
 
-SAID artifacts are pinned to immutable GitHub releases identified by producer commit hash. This ensures both CDDL and JSON representations originate from the same SAID source state.
+SAID artifacts are pinned to immutable GitHub releases. This ensures reproducibility and traceability.
 
-**Current version**: commit `d9f9bac`
-- CDDL: `said-d9f9bac.cddl` (from GitHub release `cddl-d9f9bac`)
-- JSON: `said-d9f9bac.json` (from GitHub release `json-d9f9bac`)
+**Current versions**:
+- CDDL: `said-0.1.1.cddl` (from GitHub release `cddl-0.1.1`)
+- JSON Schema: `said-0.1.0.schema.json` (from GitHub release `jsons-0.1.0`)
 
 ### Setup
 
 Fetch the SAID artifacts from the pinned GitHub releases:
 
 ```bash
-# CDDL artifact
-curl -L https://github.com/SmithSamuelM/draft-ssmith-said/releases/download/cddl-d9f9bac/said.cddl \
-  -o imports/said-d9f9bac.cddl
-
-# JSON artifact
-curl -L https://github.com/SmithSamuelM/draft-ssmith-said/releases/download/json-d9f9bac/said.json \
-  -o imports/said-d9f9bac.json
+make imports        # Fetch both CDDL and JSON artifacts
+make imports-cddl   # Fetch only CDDL from release cddl-0.1.1
+make imports-jsons  # Fetch only JSON Schema from release jsons-0.1.0
 ```
 
-Do **not** use moving repository contents (main branch exports/) as these change over time. Always use release assets for reproducibility.
+Or manually:
+
+```bash
+# CDDL artifact
+curl -L https://github.com/WebOfTrust/ietf-said/releases/download/cddl-0.1.1/said.cddl \
+  -o imports/said-0.1.1.cddl
+
+# JSON Schema
+curl -L https://github.com/WebOfTrust/ietf-said/releases/download/jsons-0.1.0/said.schema.json \
+  -o imports/said-0.1.0.schema.json
+```
 
 ### Integration
 
-To reference the SAID schema in VLEI CDDL schemas:
+To reference the SAID CDDL schema in VLEI CDDL schemas:
 
 ```cddl
-include "imports/said-d9f9bac.cddl"
+include "imports/said-0.1.1.cddl"
 ```
 
-Or use a path relative to your importing CDDL file.
+To reference the JSON Schema:
+
+```json
+{
+  "$schema": "imports/said-0.1.0.schema.json"
+}
+```
 
 ### Maintenance
 
-The commit suffix (e.g., `-d9f9bac`) is preserved so both formats are known to originate from the same SAID source state. When updating to a new SAID version, update both the CDDL and JSON artifacts from their respective release assets.
+When updating to new SAID versions, update the version variables in the Makefile:
+- `SAID_CDDL_VERSION`
+- `SAID_JSON_VERSION`
 
+This folder is maintained to keep external dependencies isolated and clearly documented for downstream consumers.
