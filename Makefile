@@ -20,11 +20,11 @@ SAID_CDDL_URL := https://github.com/SmithSamuelM/draft-ssmith-said/releases/down
 SAID_JSON_URL := https://github.com/SmithSamuelM/draft-ssmith-said/releases/download/json-$(SAID_VERSION)/said.json
 
 # Import SAID artifacts from release
-imports: imports-cddl imports-json
+imports: imports-cddl imports-jsons
 
 imports-cddl: $(SAID_CDDL)
 
-imports-json: $(SAID_JSON)
+imports-jsons: $(SAID_JSON)
 
 $(SAID_CDDL):
 	@echo "Fetching SAID CDDL from release cddl-$(SAID_VERSION)..."
@@ -36,4 +36,4 @@ $(SAID_JSON):
 	curl -s -L -f $(SAID_JSON_URL) -o $@ || (rm -f $@; echo "✗ Failed to fetch $(SAID_JSON_URL)"; exit 1)
 	@echo "✓ $(SAID_JSON)"
 
-.PHONY: imports imports-cddl imports-json
+.PHONY: imports imports-cddl imports-jsons
